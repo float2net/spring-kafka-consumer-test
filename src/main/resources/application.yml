@@ -1,0 +1,41 @@
+####################################################################################################
+# web-server 配置参数
+####################################################################################################
+server:
+  port: 8086  #web服务端口号
+  servlet:
+    context-path: /spring-kafka-consumer-test #web服务上下文根路径
+
+
+####################################################################################################
+# spring框架配置参数
+####################################################################################################
+spring:
+  application:
+    name: spring-kafka-consumer-test
+
+
+####################################################################################################
+# 日志配置参数
+####################################################################################################
+logging:
+  file:
+    name: /logs/server.log
+  level:
+    root: warn
+    org.apache.kafka.clients.consumer.ConsumerConfig: info
+    float2net.framework.springkafkaconsumer.KafkaMessageListener: trace
+    float2net.framework.springkafkaconsumer.AbstractMessageProcessTask: trace
+    float2net.framework.springkafkaconsumer.test: trace
+
+
+####################################################################################################
+# kafka-consumer任务相关配置参数（示例）
+####################################################################################################
+viid-kafka-consumer-task:
+  bootstrap-servers: localhost:9094 #多个server之间逗号分隔
+  topics: test-topic #多个topic之间逗号分隔
+  group-id: test-group
+  consumer-concurrency: 4
+  producer-concurrency: 4
+  rate-limit: 0 # 每秒限制最大消费记录数，0表示不限制
