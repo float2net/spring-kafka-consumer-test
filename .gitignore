@@ -1,0 +1,35 @@
+### Maven ###
+target/
+
+### STS ###
+bin/
+out/
+.project
+.classpath
+.settings
+.apt_generated
+.factorypath
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+classes/
+/log
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### Editplus ###
+*.bak
+log/
+portal/WEB-INF/web.xml
